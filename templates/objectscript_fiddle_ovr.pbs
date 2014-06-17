@@ -1,0 +1,78 @@
+<!doctype html> 
+<html lang="en">
+<head>
+<title>ObjectScript Fiddle</title>
+<meta charset="utf-8"> 
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+<style type="text/css">
+	#wrapper {
+		margin: 0 auto;
+		width:1050px;
+	}
+	#objectscript {
+		margin:0;
+		padding:0;
+		border:1px #efefef solid;
+		width:500px;
+		height:200px;
+	}
+	#output {
+		border:0;
+		padding:0;
+		width:500px;
+		height:200px;
+		border:1px #efefef solid;
+	}
+	.alert {
+		color:red;
+	}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).keypress(function(e) {
+	    if(e.which == 13) {
+	           var url = "/apps/pbcs.dll/exec?name=updateFiddle.php5";
+
+			    $.ajax({
+			        type: "POST",
+			        url: url,
+			        data: $("#update-fiddle").serialize(), 
+			        success: function (data) {
+			        	var iframe = document.getElementsByTagName('iframe')[0];
+			        	iframe.contentDocument.location.reload(true);
+			        }
+			    });
+		
+			    return false;
+		
+		}
+	});
+			
+</script>
+</head>
+	<body>
+		<div id="wrapper">
+			<div class="pure-g">
+				<div class="pure-u-1-1">
+					<h1>NEWSCYCLE Solutions Object Script Fiddle v0.5</h1>
+					<p>
+		            	Just hit the <strong>enter</strong> key when you're done!
+		            <p>
+				</div>
+				<!-- Input Container --> 
+		        <div class="pure-u-1-2">
+		            <h2>Object Script</h2>
+					<form name="updateFiddle" id="update-fiddle">
+							<textarea id="objectscript" name="objectscript"></textarea>
+					</form>
+		        </div>
+		        <!-- Results Container --> 
+		        <div class="pure-u-1-2">
+		            <h2>Output</h2>
+					<iframe id="output" src="/section/output"></iframe>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>

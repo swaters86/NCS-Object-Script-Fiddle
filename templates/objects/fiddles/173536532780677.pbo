@@ -1,0 +1,1 @@
+<%?@myurl="/dm/whatever"%><%@myurl$x("/","_")%>
