@@ -21,7 +21,7 @@ Running the above will output:
 
 ## How does it work? 
 
-* When you visite the site for the first time, buildFiddle.php5 script will write an object file to a sub folder in the Object folder and the name for it will be set to your NEWSCYCLE Digital session id. 
+* When you visit the site for the first time, buildFiddle.php5 script will write an object file to a sub folder in the Object folder and the name for it will be set to your NEWSCYCLE Digital session id. 
 
 * Everything written in the left box will be written to your Object file. The Object file is called on a output_ovr.pbs page which is then inserted into the right box. Ofcourse, the updateFiddle.php5 script updates the fiddle as you enter in more information. 
 * 
