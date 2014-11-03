@@ -11,7 +11,7 @@ http://swdev.tc1.dc.publicus.com/section/objectscript_fiddle
 
 ## Usage 
 
-Right now you can only use NEWSCYCLE Digital's Object Script in it. For example, you can display the current date like so:
+Right now you can only use it to parse NEWSCYCLE Digital's Object Script. For example, you can display the current date like so:
 
 <%currentdate$d("mm-dd-yyyy")%>
 
